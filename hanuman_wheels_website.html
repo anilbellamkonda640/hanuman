@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanuman Wheels | Car, Bike & Scooty Tyres & Services in Hayathnagar, Hyderabad</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            dark: '#0f172a',
+                            darker: '#090d16'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-600 to-amber-600 text-white text-xs md:text-sm font-medium py-2 px-4 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-location-dot animate-bounce"></i>
+                <span>Plot No 8, Lecturers Colony, Vijayawada Highway, Hayathnagar, Hyderabad</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:07729849585" class="hover:underline font-bold flex items-center gap-1">
+                    <i class="fa-solid fa-phone"></i> 077298 49585
+                </a>
+                <span class="hidden md:inline">|</span>
+                <span class="hidden md:inline"><i class="fa-regular fa-clock"></i> Mon-Sat: 9:30 AM - 9:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-105 transition">
+                        <i class="fa-solid fa-dharmachakra text-white text-2xl animate-spin" style="animation-duration: 12s;"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl md:text-2xl font-black tracking-wider text-white">HANUMAN <span class="text-brand-500">WHEELS</span></span>
+                        <p class="text-xs text-slate-400 font-medium tracking-wide">Tyres & Wheel Care Experts</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold">
+                    <a href="#home" class="text-brand-500 hover:text-brand-400 transition">Home</a>
+                    <a href="#services" class="text-slate-300 hover:text-brand-500 transition">Services</a>
+                    <a href="#tyres" class="text-slate-300 hover:text-brand-500 transition">Tyres Catalog</a>
+                    <a href="#why-us" class="text-slate-300 hover:text-brand-500 transition">Why Us</a>
+                    <a href="#booking" class="text-slate-300 hover:text-brand-500 transition">Book Appointment</a>
+                    <a href="#contact" class="text-slate-300 hover:text-brand-500 transition">Contact & Map</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:07729849585" class="bg-gradient-to-r from-brand-600 to-amber-500 hover:from-brand-500 hover:to-amber-400 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg shadow-brand-600/30 flex items-center gap-2 transform hover:-translate-y-0.5 transition">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>Call Now</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-brand-500 font-semibold border-b border-slate-800/60 mobile-link">Home</a>
+            <a href="#services" class="block py-2 text-slate-300 hover:text-brand-500 font-semibold border-b border-slate-800/60 mobile-link">Services</a>
+            <a href="#tyres" class="block py-2 text-slate-300 hover:text-brand-500 font-semibold border-b border-slate-800/60 mobile-link">Tyres Catalog</a>
+            <a href="#why-us" class="block py-2 text-slate-300 hover:text-brand-500 font-semibold border-b border-slate-800/60 mobile-link">Why Us</a>
+            <a href="#booking" class="block py-2 text-slate-300 hover:text-brand-500 font-semibold border-b border-slate-800/60 mobile-link">Book Appointment</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-brand-500 font-semibold mobile-link">Contact & Map</a>
+            <div class="pt-2">
+                <a href="tel:07729849585" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-solid fa-phone-volume"></i> Call 077298 49585
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-20 lg:py-28">
+        <!-- Decorative Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left Column Content -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-full px-4 py-1.5 mb-6 shadow-inner">
+                        <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-300">Hayathnagar's Premier Tyre & Wheel Studio</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+                        Your Trusted Destination for <span class="bg-gradient-to-r from-brand-500 to-amber-400 bg-clip-text text-transparent">Car, Bike & Scooty Tyres</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Precision computerized wheel balancing & alignment, expert tyre fitting, and reliable gas filling. Keep your ride smooth, safe, and fuel-efficient with top global brands.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#booking" class="w-full sm:w-auto bg-gradient-to-r from-brand-600 to-amber-500 hover:from-brand-500 hover:to-amber-400 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-brand-600/30 text-center transition transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-calendar-check mr-2"></i> Book Service Now
+                        </a>
+                        <a href="https://www.google.com/maps/place//data=!4m2!3m1!19sChIJtQnsZUihyzsR-bGpDqYiu0M" target="_blank" class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-bold px-8 py-4 rounded-xl text-center transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-map-location-dot text-brand-500"></i> Get Map Directions
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="mt-12 pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6 text-center lg:text-left">
+                        <div>
+                            <div class="text-3xl font-black text-white flex items-center justify-center lg:justify-start gap-1">
+                                <span>4.9</span> <i class="fa-solid fa-star text-amber-400 text-xl"></i>
+                            </div>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Verified Customer Rating</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-white">100%</div>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Genuine Brands</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-black text-white">Hi-Tech</div>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Computerized Setup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Card / Image Showcase -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+                        <div class="absolute -top-3 -right-3 bg-brand-500 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                            Open Today
+                        </div>
+
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-2xl bg-brand-600/20 border border-brand-500/30 flex items-center justify-center text-brand-500 text-3xl">
+                                <i class="fa-solid fa-car-side"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Hanuman Wheels</h3>
+                                <p class="text-xs text-slate-400">Hayathnagar, Hyderabad</p>
+                                <div class="flex items-center gap-1 text-amber-400 text-xs mt-1">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    <span class="text-slate-300 font-medium ml-1">(41+ Reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 mb-8 text-sm">
+                            <div class="flex items-start gap-3 bg-slate-950/50 p-3 rounded-xl border border-slate-800">
+                                <i class="fa-solid fa-location-dot text-brand-500 mt-1"></i>
+                                <span class="text-slate-300">Plot no 8, Lecturers Colony, Vijayawada Highway, near Bus Depot Rd, opposite Krishnaveni Hospital, beside HDFC Bank, Hayathnagar, Hyderabad</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-950/50 p-3 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 flex items-center gap-2"><i class="fa-regular fa-clock text-brand-500"></i> Mon - Sat:</span>
+                                <span class="text-white font-semibold">9:30 AM - 9:00 PM</span>
+                            </div>
+                            <div class="flex items-center justify-between bg-slate-950/50 p-3 rounded-xl border border-slate-800">
+                                <span class="text-slate-400 flex items-center gap-2"><i class="fa-regular fa-clock text-brand-500"></i> Sunday:</span>
+                                <span class="text-white font-semibold">9:30 AM - 2:00 PM</span>
+                            </div>
+                        </div>
+
+                        <a href="tel:07729849585" class="w-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-md">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <span>Call: 077298 49585</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-900/50 relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Expert Services</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">Complete Wheel & Tyre Care Solutions</h2>
+                <p class="text-slate-400 text-base sm:text-lg">Equipped with state-of-the-art computerized machinery for maximum precision, vehicle longevity, and a smooth ride.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition group flex flex-col justify-between shadow-lg hover:shadow-brand-500/5">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Wheel Balancing</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Eliminates steering vibrations and uneven tread wear by counterbalancing weight imbalances in your wheel assembly using high-precision digital sensors.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Smooth steering at high speeds</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Extends tyre lifespan</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition group flex flex-col justify-between shadow-lg hover:shadow-brand-500/5">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-compass"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Wheel Alignment</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Laser-guided 3D wheel alignment ensures your vehicle tracks straight, improves fuel economy, and prevents your car or bike from pulling to one side.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Precision 3D laser alignment</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Better fuel efficiency</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition group flex flex-col justify-between shadow-lg hover:shadow-brand-500/5">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Tyre Fitting</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Professional mounting and demounting for cars, bikes, and scootys without damaging alloy wheels or rims, using modern pneumatic changers.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Scratch-free rim care</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Valve replacement included</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-brand-500/50 transition group flex flex-col justify-between shadow-lg hover:shadow-brand-500/5">
+                    <div>
+                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-500 group-hover:text-white transition">
+                            <i class="fa-solid fa-wind"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Nitrogen / Gas Filling</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Maintain consistent tyre pressure across varying temperatures with clean nitrogen gas filling. Reduces pressure loss and improves tyre safety.
+                        </p>
+                    </div>
+                    <ul class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Stable tyre pressure</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-500"></i> Cooler running tyres</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tyres Showcase Section -->
+    <section id="tyres" class="py-20 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-500 text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Inventory Catalog</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">Tyres for All Vehicles & Top Brands</h2>
+                <p class="text-slate-400 text-base">Explore our extensive stock of genuine tyres for Cars, Bikes, and Scootys with immediate fitting support.</p>
+            </div>
+
+            <!-- Vehicle Category Filter Tabs -->
+            <div class="flex justify-center mb-10 overflow-x-auto pb-2">
+                <div class="bg-slate-900 p-1.5 rounded-2xl border border-slate-800 flex gap-2">
+                    <button onclick="filterTyres('all')" id="btn-all" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold bg-brand-600 text-white shadow-md transition">All Tyres</button>
+                    <button onclick="filterTyres('car')" id="btn-car" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold text-slate-300 hover:text-white transition">Car Tyres</button>
+                    <button onclick="filterTyres('bike')" id="btn-bike" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold text-slate-300 hover:text-white transition">Bike Tyres</button>
+                    <button onclick="filterTyres('scooty')" id="btn-scooty" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-bold text-slate-300 hover:text-white transition">Scooty Tyres</button>
+                </div>
+            </div>
+
+            <!-- Tyres Grid -->
+            <div id="tyres-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="tyre-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between" data-category="car">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-brand-500/10 text-brand-500 text-xs font-bold px-3 py-1 rounded-full">Car Tyre</span>
+                            <span class="text-emerald-400 text-xs font-semibold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Bridgestone / Michelin Radial</h3>
+                        <p class="text-slate-400 text-sm mb-4">High performance tubeless radial tyres engineered for supreme wet grip and comfortable highway cruising.</p>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4 text-xs space-y-1">
+                            <div class="text-slate-300"><span class="text-slate-500">Popular Sizes:</span> 185/65 R15, 195/55 R16, 175/70 R14</div>
+                            <div class="text-slate-300"><span class="text-slate-500">Best for:</span> Hatchbacks, Sedans, SUVs</div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-medium">Free Fitting & Balancing</span>
+                        <a href="#booking" class="bg-slate-800 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">Enquire Size</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="tyre-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between" data-category="car">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-brand-500/10 text-brand-500 text-xs font-bold px-3 py-1 rounded-full">Car Tyre</span>
+                            <span class="text-emerald-400 text-xs font-semibold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">MRF / CEAT / Apollo SUV</h3>
+                        <p class="text-slate-400 text-sm mb-4">Rugged tread patterns designed for Indian road conditions, offering superior load durability and puncture resistance.</p>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4 text-xs space-y-1">
+                            <div class="text-slate-300"><span class="text-slate-500">Popular Sizes:</span> 215/65 R16, 235/60 R18, 165/80 R14</div>
+                            <div class="text-slate-300"><span class="text-slate-500">Best for:</span> Compact SUVs, Sedans</div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-medium">Free Fitting & Balancing</span>
+                        <a href="#booking" class="bg-slate-800 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">Enquire Size</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="tyre-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between" data-category="bike">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1 rounded-full">Bike Tyre</span>
+                            <span class="text-emerald-400 text-xs font-semibold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">MRF Zapper / CEAT Zoom</h3>
+                        <p class="text-slate-400 text-sm mb-4">Superior cornering grip and rainy weather traction for commuter motorcycles and sports bikes.</p>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4 text-xs space-y-1">
+                            <div class="text-slate-300"><span class="text-slate-500">Popular Sizes:</span> 90/90-18, 100/90-17, 140/70-17</div>
+                            <div class="text-slate-300"><span class="text-slate-500">Best for:</span> Commuter & Sports Motorcycles</div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-medium">Quick Fitting</span>
+                        <a href="#booking" class="bg-slate-800 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">Enquire Size</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="tyre-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between" data-category="scooty">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amber-500/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full">Scooty Tyre</span>
+                            <span class="text-emerald-400 text-xs font-semibold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">JK Tyre / TVS Eurogrip Scooty</h3>
+                        <p class="text-slate-400 text-sm mb-4">Tubeless tyres built for city commutes, offering low rolling resistance and high mileage durability.</p>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4 text-xs space-y-1">
+                            <div class="text-slate-300"><span class="text-slate-500">Popular Sizes:</span> 90/100-10, 90/90-12, 3.50-10</div>
+                            <div class="text-slate-300"><span class="text-slate-500">Best for:</span> Activa, Access, Jupiter, Dio</div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-medium">Quick Fitting</span>
+                        <a href="#booking" class="bg-slate-800 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">Enquire Size</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="tyre-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between" data-category="bike">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-blue-500/10 text-blue-400 text-xs font-bold px-3 py-1 rounded-full">Bike Tyre</span>
+                            <span class="text-emerald-400 text-xs font-semibold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Michelin City Pro / Pirelli</h3>
+                        <p class="text-slate-400 text-sm mb-4">Patented puncture-resistant technology for motorcycles ensuring peace of mind on long highway trips.</p>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4 text-xs space-y-1">
+                            <div class="text-slate-300"><span class="text-slate-500">Popular Sizes:</span> 80/100-18, 120/80-17</div>
+                            <div class="text-slate-300"><span class="text-slate-500">Best for:</span> Premium Commuters & Cruisers</div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-medium">Quick Fitting</span>
+                        <a href="#booking" class="bg-slate-800 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">Enquire Size</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="tyre-card bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl flex flex-col justify-between" data-category="car">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-brand-500/10 text-brand-500 text-xs font-bold px-3 py-1 rounded-full">Car Tyre</span>
+                            <span class="text-emerald-400 text-xs font-semibold flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> In Stock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Yokohama Earth-1 / BluEarth</h3>
+                        <p class="text-slate-400 text-sm mb-4">Japanese engineering designed for tough Indian roads with enhanced sidewall protection and low noise.</p>
+                        <div class="bg-slate-950 p-3 rounded-xl border border-slate-800 mb-4 text-xs space-y-1">
+                            <div class="text-slate-300"><span class="text-slate-500">Popular Sizes:</span> 175/65 R14, 195/60 R15, 205/65 R16</div>
+                            <div class="text-slate-300"><span class="text-slate-500">Best for:</span> Sedans & Compact SUVs</div>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 border-t border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-400 font-medium">Free Fitting & Balancing</span>
+                        <a href="#booking" class="bg-slate-800 hover:bg-brand-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">Enquire Size</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Brand Logos Banner -->
+            <div class="mt-16 bg-slate-900/60 border border-slate-800 rounded-2xl p-8 text-center">
+                <p class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-6">Authorized Dealer & Stockist of Leading Brands</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-80">
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">BRIDGESTONE</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">MRF</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">CEAT</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">MICHELIN</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">YOKOHAMA</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">JK TYRE</span>
+                    <span class="text-lg sm:text-xl font-black tracking-wider text-slate-300">APOLLO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-slate-900/50 relative border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <span class="text-brand-500 text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Why Choose Us</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white mt-3 mb-6">Hayathnagar's Most Trusted Wheel Specialists</h2>
+                    <p class="text-slate-300 text-base leading-relaxed mb-8">
+                        At <strong class="text-white">Hanuman Wheels</strong>, customer safety and vehicle performance are our highest priorities. We combine expert craftsmanship with state-of-the-art computerized machinery to deliver precision care.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl shrink-0 mt-1">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">4.9 Star Customer Satisfaction</h3>
+                                <p class="text-slate-400 text-sm">Consistently rated highest by vehicle owners in Hayathnagar and surrounding areas for honest service and quality tyres.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl shrink-0 mt-1">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">State-of-the-Art Computerized Equipment</h3>
+                                <p class="text-slate-400 text-sm">Advanced 3D alignment and high-speed balancing machines guarantee factory-level precision for your car or bike.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start">
+                            <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl shrink-0 mt-1">
+                                <i class="fa-solid fa-handshake-angle"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-1">Transparent & Competitive Pricing</h3>
+                                <p class="text-slate-400 text-sm">No hidden charges. Genuine company warranty on all tyres with upfront quotes and expert recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Highlight Box -->
+                <div class="lg:col-span-6">
+                    <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+                        <div class="absolute -bottom-10 -right-10 w-60 h-60 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                        <h3 class="text-2xl font-bold text-white mb-6">Customer Reviews & Experience</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800/80">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-bold text-white text-sm">Sateesh Reddy</span>
+                                    <div class="text-amber-400 text-xs">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-300 text-xs italic">"Very professional service for wheel balancing and alignment on Vijayawada highway near Hayathnagar depot. Fast work and reasonable prices!"</p>
+                            </div>
+
+                            <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800/80">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="font-bold text-white text-sm">Ramesh Kumar</span>
+                                    <div class="text-amber-400 text-xs">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                                <p class="text-slate-300 text-xs italic">"Changed all 4 tyres of my car here. Got authentic Bridgestone tyres with free balancing and nitrogen filling. Highly recommended!"</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+                            <span class="text-xs text-slate-400 font-medium">Located right opposite Krishnaveni Hospital</span>
+                            <a href="#contact" class="text-brand-500 hover:underline text-xs font-bold flex items-center gap-1">
+                                View Map <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Service Inquiry Form Section -->
+    <section id="booking" class="py-20 bg-slate-950 border-t border-slate-900 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-500 text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Quick Appointment</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">Book Your Service or Tyre Fitting</h2>
+                <p class="text-slate-400 text-base">Fill out the quick form below and our team will confirm your slot instantly.</p>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+                <!-- Success Notification Box (Hidden by default) -->
+                <div id="success-alert" class="hidden mb-6 bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 p-4 rounded-2xl flex items-center gap-3">
+                    <i class="fa-solid fa-circle-check text-2xl text-emerald-400"></i>
+                    <div>
+                        <h4 class="font-bold text-sm">Appointment Request Received!</h4>
+                        <p class="text-xs text-emerald-200/80">Thank you! Our team at Hanuman Wheels, Hayathnagar will call you shortly to confirm your booking.</p>
+                    </div>
+                </div>
+
+                <form id="appointment-form" onsubmit="handleBooking(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Full Name -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Your Name *</label>
+                            <input type="text" id="name" required placeholder="e.g., Rajesh Kumar" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="e.g., 9876543210" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <!-- Vehicle Type -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Vehicle Type *</label>
+                            <select id="vehicle-type" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                                <option value="" disabled selected>Select vehicle</option>
+                                <option value="Car">Car</option>
+                                <option value="Bike">Bike / Motorcycle</option>
+                                <option value="Scooty">Scooty / Scooter</option>
+                            </select>
+                        </div>
+
+                        <!-- Service Required -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Service Needed *</label>
+                            <select id="service-needed" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                                <option value="" disabled selected>Select service</option>
+                                <option value="Wheel Alignment">Wheel Alignment</option>
+                                <option value="Wheel Balancing">Wheel Balancing</option>
+                                <option value="Tyre Fitting">Tyre Fitting</option>
+                                <option value="Gas / Nitrogen Filling">Nitrogen / Gas Filling</option>
+                                <option value="New Tyres Enquiry">New Tyres Enquiry</option>
+                            </select>
+                        </div>
+
+                        <!-- Vehicle Number -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Vehicle Number / Model</label>
+                            <input type="text" id="vehicle-no" placeholder="e.g., TS08AB1234" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Preferred Date -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Date *</label>
+                            <input type="date" id="date" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                        </div>
+
+                        <!-- Preferred Time -->
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Preferred Time Slot *</label>
+                            <select id="time" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-slate-100 text-sm focus:outline-none focus:border-brand-500 transition">
+                                <option value="" disabled selected>Select time slot</option>
+                                <option value="Morning (9:30 AM - 12:00 PM)">Morning (9:30 AM - 12:00 PM)</option>
+                                <option value="Afternoon (12:00 PM - 4:00 PM)">Afternoon (12:00 PM - 4:00 PM)</option>
+                                <option value="Evening (4:00 PM - 9:00 PM)">Evening (4:00 PM - 9:00 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-gradient-to-r from-brand-600 to-amber-500 hover:from-brand-500 hover:to-amber-400 text-white font-bold py-4 rounded-xl shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5 text-base flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Confirm Booking Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900/50 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-500 text-xs sm:text-sm font-bold uppercase tracking-widest bg-brand-500/10 px-3 py-1 rounded-full">Find Us</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-white mt-3 mb-4">Visit Hanuman Wheels in Hayathnagar</h2>
+                <p class="text-slate-400 text-base">Easily accessible on Vijayawada Highway near the bus depot.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+                <!-- Details Card -->
+                <div class="lg:col-span-5 bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between shadow-xl">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6">Store Information</h3>
+
+                        <div class="space-y-6 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Address</h4>
+                                    <p class="text-slate-300 leading-relaxed">
+                                        Plot no 8, Lecturers Colony, Vijayawada Highway, near Bus Depot Rd, opposite Krishnaveni Hospital, beside HDFC Bank, Hayathnagar, Hyderabad 501505
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Phone Number</h4>
+                                    <p class="text-slate-300">
+                                        <a href="tel:07729849585" class="hover:text-brand-500 font-bold transition">077298 49585</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Working Hours</h4>
+                                    <p class="text-slate-300">Monday - Saturday: 9:30 AM – 9:00 PM</p>
+                                    <p class="text-slate-300">Sunday: 9:30 AM – 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-slate-800">
+                        <a href="https://www.google.com/maps/place//data=!4m2!3m1!19sChIJtQnsZUihyzsR-bGpDqYiu0M" target="_blank" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-lg transition">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Open in Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed / Card -->
+                <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-xl min-h-[400px] flex flex-col">
+                    <div class="w-full h-full flex-grow min-h-[400px] relative">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.15957794276!2d78.6385!3d17.3275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcce328656ccfbd%3A0x41ba28a64ea46efb!2sHanuman%20wheels!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; filter: grayscale(20%) contrast(110%) invert(90%) hue-rotate(180deg);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Hanuman Wheels Location Map">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center text-white text-xl">
+                            <i class="fa-solid fa-dharmachakra"></i>
+                        </div>
+                        <span class="text-lg font-black tracking-wider text-white">HANUMAN <span class="text-brand-500">WHEELS</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                        Your reliable destination for car, bike & scooty tyres, computerized wheel balancing, alignment, and expert tyre fitting in Hayathnagar, Hyderabad.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-brand-500 transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-brand-500 transition">Services & Care</a></li>
+                        <li><a href="#tyres" class="hover:text-brand-500 transition">Tyres Catalog</a></li>
+                        <li><a href="#why-us" class="hover:text-brand-500 transition">Why Choose Us</a></li>
+                        <li><a href="#booking" class="hover:text-brand-500 transition">Book Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><span class="hover:text-brand-500 transition">Wheel Balancing</span></li>
+                        <li><span class="hover:text-brand-500 transition">Wheel Alignment</span></li>
+                        <li><span class="hover:text-brand-500 transition">Professional Tyre Fitting</span></li>
+                        <li><span class="hover:text-brand-500 transition">Nitrogen & Gas Filling</span></li>
+                        <li><span class="hover:text-brand-500 transition">Tubeless Puncture Repair</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Contact Info</h4>
+                    <ul class="space-y-3 text-xs">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-500 mt-0.5"></i>
+                            <span>Plot no 8, Lecturers Colony, Vijayawada Hwy, Hayathnagar, Hyderabad</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-brand-500"></i>
+                            <a href="tel:07729849585" class="hover:text-white font-bold">077298 49585</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-brand-500"></i>
+                            <span>Mon-Sat: 9:30 AM - 9:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Hanuman Wheels, Hayathnagar, Hyderabad. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Designed for Car, Bike & Scooty Wheel Care</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking a link
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Tyre Catalog Filtering
+        function filterTyres(category) {
+            const cards = document.querySelectorAll('.tyre-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'text-white', 'shadow-md');
+                btn.classList.add('text-slate-300');
+            });
+            const activeBtn = document.getElementById(`btn-${category}`);
+            if(activeBtn) {
+                activeBtn.classList.add('bg-brand-600', 'text-white', 'shadow-md');
+                activeBtn.classList.remove('text-slate-300');
+            }
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Handle Booking Form Submission
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const vehicle = document.getElementById('vehicle-type').value;
+            const service = document.getElementById('service-needed').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Show success alert
+            const alertBox = document.getElementById('success-alert');
+            alertBox.classList.remove('hidden');
+
+            // Reset form
+            document.getElementById('appointment-form').reset();
+
+            // Scroll to alert
+            alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            // Hide alert after 8 seconds
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 8000);
+        }
+
+        // Set minimum date for date picker to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+    </script>
+</body>
+</html>
